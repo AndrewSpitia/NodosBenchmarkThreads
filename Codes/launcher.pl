@@ -21,15 +21,17 @@ close($machineFile);
 #Vector of executables
 chomp($machineName);
 @Executables=("Algorithm1","Algorithm2","Algorithm3");
-@Dimension=("96","200","400","800","1600","3600");
+@Dimension=("96","200","400","800","1600","3200");
 @Threads=("1","2","4","8");
+$File="results/results-$machineName.csv";
+open(FILE,">>",$File) or die "Could not open file $File";
+print FILE "Node,NumThreads,Load,Algorithm,Time\n";
+close($File);
 foreach $size (@Dimension){
 	foreach $exe (@Executables){
-		$File="results/results-$machineName.csv";
+		open(FILE,">>",$File) or die "Could not open file $File";
 		#print"$File \n";
 		foreach $thread (@Threads){
-			open(FILE,">>",$File) or die "Could not open file $File";
-			print FILE "Node,NumThreads,Load,Algorithm,Time\n";
 			for($i=0;$i<$N;$i++){
 				print FILE "$machineName,$thread,$size,$exe,";
 				system "$PATH/$exe $size $thread >> $File";
