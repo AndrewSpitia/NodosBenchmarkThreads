@@ -7,7 +7,7 @@
 
 $PATH=`pwd`; # get the current path
 chomp($PATH); # remove the last character (\n)
-$N =10; # number of processes
+$N =36; # number of processes
 system "make clean"; # clean the previous compilation
 system "make all"; # compile the program
 
