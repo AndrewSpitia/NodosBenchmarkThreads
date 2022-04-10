@@ -32,7 +32,7 @@ foreach $size (@Dimension){
 			print FILE "Node,NumThreads,Load,Algorithm,Time\n";
 			for($i=0;$i<$N;$i++){
 				print FILE "$machineName,$thread,$size,$exe,";
-				system "$PATH/$exe $size $thread>> $File";
+				system "$PATH/$exe $size $thread >> $File";
 				print FILE "\n";
 			}
 		}
