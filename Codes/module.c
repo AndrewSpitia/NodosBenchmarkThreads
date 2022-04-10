@@ -40,7 +40,7 @@ void sampleEnd()
 	clock_gettime(CLOCK_MONOTONIC, &fin);
 	totalTime = (fin.tv_sec - inicio.tv_sec) * 1e9;
 	totalTime = (totalTime + (fin.tv_nsec - inicio.tv_nsec)) * 1e-9;
-	printf("%f\n", totalTime);
+	printf("%f", totalTime);
 }
 
 /**
