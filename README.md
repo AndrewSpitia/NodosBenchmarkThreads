@@ -10,4 +10,4 @@ Contenido:
     * Hay un archivo ```Makefile``` que optimiza la compilación de los programas mencionados anteriormente. Para ejecutar los programas, se utiliza ```make nombreDelprogramaSinExtension```
     * Hay un archivo ```launcher.pl``` que compila y ejecuta los programas mencionados. Este realiza ejecuciones de los 3 algoritmos en tamaños de matrices de n\*n con valores de n iguales a 96, 200,400, 800, 1600 y 3200. Para ejecutarlo, debe primero cambiar el nombre de su máquina en el archivo ```machine.txt```. Para ejecutarlo: ```./launcher.pl```
     * Hay un directorio con nombre ```results``` que contiene los resultados de la ejecución de los programas en algunos nodos de cómputo.
-    * Hay un archivo ```graficas_parcial_1.ipynb``` que lee los archivos de la carpeta results y los procesa para generar gráficas para las comparativas 
+* Hay un archivo ```graficas_parcial_1.ipynb``` que lee los archivos de la carpeta results y los procesa para generar gráficas para las comparativas 
